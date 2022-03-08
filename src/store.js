@@ -1,4 +1,5 @@
 import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
+import { KhachHangDangNhapReducer, KhachHangDangKiReducer } from './reducers/CustomerReducer';
 import thunk from 'redux-thunk';
 const initialState = {
     DangNhap: {
@@ -6,18 +7,10 @@ const initialState = {
         ? JSON.parse(localStorage.getItem('ThongTinKhachHang'))
         : null,
     },
-    GioHang: {
-        ChiTietDonHang: localStorage.getItem('ChiTietDonHang')
-        ? JSON.parse(localStorage.getItem('ChiTietDonHang'))
-        : [],
-        ThongTinGiaoHang: localStorage.getItem('ThongTinGiaoHang')
-        ? JSON.parse(localStorage.getItem('ThongTinGiaoHang'))
-        : {},
-        PhuongThucThanhToan: '',
-    },
 };
 const reducer = combineReducers({
-    
+    DangNhap: KhachHangDangNhapReducer,
+    DangKi: KhachHangDangKiReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, initialState, composeEnhancer(applyMiddleware(thunk)));
