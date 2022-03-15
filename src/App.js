@@ -2,8 +2,11 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {DangXuat} from './actions/CustomerAction';
 import "./style.css";
+import Test from './pages/testpage/test';
+import { useState } from 'react';
 
 function App() {
+  const [test, setTest] = useState("");
   const ThongTinDangNhap = useSelector((state) => state.DangNhap);
   const { ThongTinKhachHang } = ThongTinDangNhap;
   const dispatch = useDispatch();
@@ -107,7 +110,7 @@ function App() {
         </div>
       </div>
       <main>
-        
+        <Test/>
       </main>
       <div class="contact-me">
         <p>Du Lich Thoi</p>
