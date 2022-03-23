@@ -4,6 +4,7 @@ import {DangXuat} from './actions/CustomerAction';
 import "./style.css";
 import Test from './pages/testpage/test';
 import { useState } from 'react';
+import Ky from './pages/ky/index';
 
 function App() {
   const [test, setTest] = useState("");
@@ -110,7 +111,7 @@ function App() {
         </div>
       </div>
       <main>
-        <Test/>
+        <Ky/>
       </main>
       <div class="contact-me">
         <p>Du Lich Thoi</p>
