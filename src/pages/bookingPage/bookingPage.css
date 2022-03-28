@@ -1,0 +1,275 @@
+.bookingPage {
+  background-color: rgb(245, 245, 247);
+}
+.bookingDetail {
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-shadow: 7px 7px 13px -12px #000000;
+  box-shadow: 7px 7px 13px -12px #000000;
+}
+
+.bookingDetailTop {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.bookingDetailInfo {
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.bookingDetailBottom {
+  color: #000000;
+  font-weight: 300;
+  font-size: 14px;
+  padding-left: 5%;
+}
+
+.bookingContent {
+  display: flex;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bookingContentDetail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  flex: 3;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.titleIcon {
+  font-size: 28px !important;
+  color: #2145e4;
+}
+
+.bookingContentDetailFly {
+  display: flex;
+  -webkit-box-shadow: 7px 7px 13px -12px #000000;
+  box-shadow: 7px 7px 13px -12px #000000;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bookingContentDetailFlyLeft {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border-right: 1px solid black;
+}
+
+.titleTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 10px;
+}
+
+.bookingContentFlyTitle {
+  font-weight: 400;
+  font-size: 14px;
+  color: #36b169;
+}
+
+.airline {
+  font-weight: 300;
+  font-size: 14px;
+  color: #5487e6;
+}
+
+.titleBottom {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+.titleBottom1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flyTime {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.flyDirection {
+  font-weight: 300;
+  font-size: 14px;
+  color: #222222;
+}
+
+.bookingContentIcon {
+  font-size: 14px !important;
+}
+
+.circle {
+  font-size: 10px !important;
+  color: #2145e4 !important;
+}
+
+.bookingContentDetailFlyRight {
+  padding-left: 20px;
+  flex-direction: column;
+  width: 30%;
+}
+
+.quest {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 20px !important;
+}
+
+.popup1 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2145e4;
+  cursor: pointer;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+}
+
+.bookingHotel {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingContentDetailHotel {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 7px 7px 13px -12px #000000;
+  box-shadow: 7px 7px 13px -12px #000000;
+  margin-bottom: 20px;
+}
+
+.bookingContentDetailHotelImg {
+  width: 200px;
+  height: 200px;
+}
+
+.bookingContentDetailHotel1 {
+  flex-direction: column;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.bookingContentDetailHotelTop {
+}
+
+.hotelName {
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.address1 {
+  margin-bottom: 20px;
+}
+
+.hotelIcon {
+}
+
+.bookingContentDetailHotelBottom {
+  display: flex;
+  padding-top: 15px;
+  justify-content: space-around;
+}
+
+.hotelPriceDefault {
+  flex-direction: column;
+  flex: 1;
+}
+
+.hotelTitle {
+  font-weight: 400;
+  color: grey;
+  font-size: 18px;
+}
+
+.hotelPrice {
+  text-decoration: line-through;
+  font-weight: 400;
+  color: grey;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.hotelTitle1 {
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+}
+
+.hotelSavePrice {
+  font-weight: 600;
+  color: rgb(0, 70, 161);
+  font-size: 22px;
+}
+
+.hotelSaved {
+  font-weight: 400;
+  color: rgb(46, 146, 0);
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.coverTicket {
+  display: flex;
+  align-items: center;
+}
+
+.hotelPlaneTicket {
+  font-weight: 400;
+  color: rgb(0, 70, 161);
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.linkaaa {
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkaaa:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+}

@@ -1,0 +1,71 @@
+.sidebar {
+  flex: 1;
+  width: 300px;
+  background-color: #fff;
+  -webkit-box-shadow: 7px 7px 13px -12px #000000;
+  box-shadow: 7px 7px 13px -12px #000000;
+}
+
+.sidebarSearching {
+  height: 50px;
+  border-bottom: 1px solid rgb(124, 123, 123);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.sidebarSearchingTitle {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+
+.sidebarSearchingButton {
+  width: 90px;
+  height: 30px;
+  border: none;
+  background-color: rgb(255, 92, 92);
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.sidebarPrice {
+  padding-left: 5%;
+  padding-top: 10px;
+  border-bottom: 1px solid rgb(124, 123, 123);
+}
+
+.sidebarPriceTitle {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.sidebarPriceTag {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarPriceTagElement {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarRate {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.sidebarRateTagElement {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarRateIcon {
+  color: rgb(255, 217, 0) !important;
+}

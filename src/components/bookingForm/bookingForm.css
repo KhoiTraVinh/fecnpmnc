@@ -1,0 +1,79 @@
+.Title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #000;
+  margin-left: 25px;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 100%;
+  border: 1.3px solid black;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.searchFormTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchFromBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchFromBottomLeft {
+  display: flex;
+}
+
+.searchFrom {
+  flex-direction: column;
+  margin-left: 27px;
+  margin-right: 37px;
+  margin-top: 5px;
+  margin-bottom: 14px;
+}
+
+.searchTitle {
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.coverDatime {
+  margin-top: 8px;
+}
+
+.searchFromPeo {
+  display: flex;
+}
+
+.searchHotel {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.searchDate {
+}
+
+.search {
+  margin-top: 10px;
+  margin-right: 37px;
+  width: 160px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9004d;
+}
+
+.search:hover {
+  background-color: #f0a2bb;
+}
