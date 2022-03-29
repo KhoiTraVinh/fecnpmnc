@@ -1,9 +1,8 @@
 .bookingPage {
-  background-color: rgb(245, 245, 247);
+  background-color: rgb(227, 227, 230);
 }
 .bookingDetail {
-  background-color: #fff;
-
+  background-color: white;
   display: flex;
   flex-direction: column;
   width: 85%;

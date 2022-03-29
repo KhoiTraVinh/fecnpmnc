@@ -1,9 +1,12 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { DangXuat } from "./actions/CustomerAction";
-import HomePage from "./pages/homePage/HomePage.jsx";
+import HomePage from "./pages/homePage/HomePage";
+import Hotel from "./pages/hotelPage/Hotel";
 import { BrowserRouter } from "react-router-dom";
 import BookingPage from "./pages/bookingPage/BookingPage.jsx";
+
+import ComboDetail from "./pages/comboDetail/ComboDetail";
 
 function App() {
   const ThongTinDangNhap = useSelector((state) => state.DangNhap);
@@ -19,6 +22,12 @@ function App() {
       </Route>
       <Route path="/booking">
         <BookingPage />
+      </Route>
+      <Route path="/hotel">
+        <Hotel />
+      </Route>
+      <Route path="/comboDetail">
+        <ComboDetail />
       </Route>
     </BrowserRouter>
   );

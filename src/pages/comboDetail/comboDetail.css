@@ -1,0 +1,270 @@
+.comboDetail {
+  background-color: rgb(227, 227, 230);
+}
+.comboDetailContent {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comboDetail1 {
+  -webkit-box-shadow: 7px 7px 13px -12px #000000;
+  box-shadow: 7px 7px 13px -12px #000000;
+  padding: 10px;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.ContentCover {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.comboDetailContentLeft {
+  width: 65%;
+  margin-right: 10px;
+}
+
+.comboLeftTitle {
+  font-weight: 600;
+  font-size: 28px;
+  color: #000;
+}
+
+.FlyDetail {
+  background-color: #fff;
+  margin-top: 15px;
+  padding-top: 10px;
+  -webkit-box-shadow: 7px 7px 13px -12px #000000;
+  box-shadow: 7px 7px 13px -12px #000000;
+}
+
+.contentCoverIcon {
+  color: rgb(28, 109, 185);
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.contentCoverIcon1 {
+  color: rgb(119, 111, 111);
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.FlyDetail1 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  align-items: center;
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.FlyDetail2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.comboFlyDate {
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.FlyDetailInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.airport {
+  display: flex;
+  margin-left: 10px;
+}
+
+.name {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.name1 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.name2 {
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(134, 132, 132);
+}
+
+.airportImg {
+  width: 50px;
+  height: 30px;
+}
+
+.timeFly {
+  display: flex;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.timeFly1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeFly1Time {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 13px;
+}
+
+.timeFly1TimePlc {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(134, 132, 132);
+}
+
+.timeFly2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.timeFly2Time {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(134, 132, 132);
+  margin-bottom: 5px;
+}
+
+.coverHr {
+  width: 70px;
+  height: 1.2px;
+}
+
+.timeFly2TimePlc {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(134, 132, 132);
+  margin-top: 5px;
+}
+
+.FlyDetail3 {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(13, 13, 134);
+  padding-bottom: 10px;
+}
+
+.HotelDetail {
+  background-color: #fff;
+  margin-top: 20px;
+  padding-top: 10px;
+  -webkit-box-shadow: 7px 7px 13px -12px #000000;
+  box-shadow: 7px 7px 13px -12px #000000;
+}
+
+.HotelDetail2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.comboHotelDate {
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.HotelDetailInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.room {
+  display: flex;
+}
+
+.roomImg {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.HotelName1 {
+  font-weight: 600;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-top: 5px;
+}
+
+.HotelIcon {
+  font-size: 14px !important;
+}
+
+.HotelName2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: grey;
+  margin-right: 20px;
+  margin-top: 10px;
+  line-height: 20px;
+}
+
+.HotelService {
+  display: flex;
+  margin-top: 10px;
+}
+
+.HotelService1 {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  margin-right: 20px;
+  margin-top: 10px;
+  line-height: 20px;
+}
+
+.HotelIcon {
+  color: green;
+  margin-right: 10px;
+}
+
+.HotelDetail3 {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.comboDetailContentRight {
+  width: 35%;
+  background-color: #fff;
+  margin-left: 10px;
+  -webkit-box-shadow: 7px 7px 13px -12px #000000;
+  box-shadow: 7px 7px 13px -12px #000000;
+}

@@ -1,0 +1,259 @@
+.hotel {
+  background-color: rgb(227, 227, 230) !important;
+}
+
+.hotelContent {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotelOverview {
+  -webkit-box-shadow: 6px 7px 15px -11px #000000;
+  box-shadow: 6px 7px 15px -11px #000000;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background-color: #fff;
+}
+
+.hotelOverviewTitle {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.hotelName {
+  font-weight: 600;
+  font-size: 28px !important;
+}
+
+.address {
+  font-size: 14px;
+  margin: 5px;
+  color: rgb(5, 110, 5);
+}
+
+.hotelIcon {
+  font-size: 14px !important;
+}
+
+.hotelOverviewCover {
+  display: flex;
+}
+
+.hotelOverviewImg {
+}
+
+.hotelOverviewDetail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.hotelOverviewTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.hotelTitleDetail {
+  font-size: 14px;
+  font-weight: 300;
+  color: #000000;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-right: 15px;
+}
+
+.hotelTitleHighlight {
+  margin-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+.hotelTitleHighlightTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.coverHighlight {
+  display: flex;
+  align-items: center;
+}
+
+.hotelHighlightIcon {
+  font-size: 18px !important;
+  margin-right: 5px;
+  color: rgb(5, 110, 5);
+}
+
+.hotelBookingButton {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(172, 44, 44);
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.roomBooking {
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  -webkit-box-shadow: 6px 7px 15px -11px #000000;
+  box-shadow: 6px 7px 15px -11px #000000;
+}
+
+.roomBookingTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.roomBookingTopTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.roomBookingTopDetail {
+  color: red;
+  font-size: 20px;
+  font-weight: 400;
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.roomBookingTopIcon {
+  margin-bottom: 5px;
+  font-size: 18px !important;
+  margin-right: 10px;
+}
+
+.coverSearch {
+  display: flex;
+  align-items: center;
+}
+
+.searchc {
+  width: 160px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(172, 54, 54);
+  cursor: pointer;
+  margin-left: 50px;
+  color: aliceblue;
+}
+
+.roomBookingBottom {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 3px 1px 11px -3px #000000;
+  box-shadow: 3px 1px 11px -3px #000000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.roomBookingBottom:hover {
+  border: 1.6px solid blue;
+}
+
+.roomBookingBottomImg {
+  width: 250px;
+  height: 200px;
+}
+
+.roomBookingBottomContent {
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: space-between;
+  display: flex;
+  width: 55%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftTitle {
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.leftDet {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-weight: 300;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.BottomIcon {
+  color: rgb(12, 110, 12);
+  font-size: 20px !important;
+  margin-right: 10px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.right1 {
+  display: flex;
+  align-items: center;
+  color: orange;
+  font-size: 28px !important;
+}
+
+.BottomIcon1 {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 20px !important;
+}
+
+.right2 {
+  font-size: 18px;
+  color: orange;
+}
+
+.roomBookingBottomBookingButton {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.buttonB {
+  width: 160px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(172, 54, 54);
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.buttonDetail {
+  color: rgb(172, 54, 54);
+  font-size: 14px;
+  margin-top: 10px;
+}
