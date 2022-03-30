@@ -18,7 +18,7 @@ export const HomePage = () => {
         <div className="topbar">
           <nav>
             <h2 className="logo">
-              <Link to="/comboDetail">ComBo<span> UuDai</span></Link>
+              <Link to="/">ComBo<span> UuDai</span></Link>
             </h2>
             <ul>
               <li>
