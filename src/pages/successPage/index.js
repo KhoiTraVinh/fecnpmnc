@@ -1,10 +1,9 @@
 import React,{useEffect,useState} from 'react';
-import CheckOut from '../components/CheckOut';
+import CheckOut from '../../components/checkoutstep';
 
 
-export default function DonHang(props) {
+export default function Success(props) {
     const TraTienne=() => {
-        dispatch(TaoDonHang({ ...giohang, ChiTietDonHang: giohang.ChiTietDonHang}))
     }
     return (
         <div>

@@ -1,9 +1,8 @@
 import React,{useState} from 'react'
-import CheckOut from '../components/CheckOut'
+import CheckOut from '../../components/checkoutstep';
 
-export default function ThanhToan(props) {
+export const PayPage = (props) => {
     const [PhuongThucThanhToan, setPhuongThucThanhToan] = useState('PayPal')
-    const dispatch = useDispatch();
     const ThanhToanne = (e) => {
         e.preventDefault();
         props.history.push('/donhang');

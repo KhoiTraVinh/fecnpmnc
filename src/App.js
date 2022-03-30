@@ -7,6 +7,9 @@ import { BrowserRouter } from "react-router-dom";
 import BookingPage from "./pages/bookingPage/BookingPage.jsx";
 
 import ComboDetail from "./pages/comboDetail/ComboDetail";
+import Form from "./pages/formPage";
+import {PayPage} from './pages/payPage';
+import Success from "./pages/successPage";
 
 function App() {
   const ThongTinDangNhap = useSelector((state) => state.DangNhap);
@@ -28,6 +31,15 @@ function App() {
       </Route>
       <Route path="/comboDetail">
         <ComboDetail />
+      </Route>
+      <Route path="/form">
+        <Form />
+      </Route>
+      <Route path="/pay">
+        <PayPage />
+      </Route>
+      <Route path="/success">
+        <Success />
       </Route>
     </BrowserRouter>
   );

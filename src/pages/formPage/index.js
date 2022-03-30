@@ -1,14 +1,14 @@
 import React,{useState} from 'react'
-import CheckOut from '../components/CheckOut'
+import CheckOut from '../../components/checkoutstep';
 import {useDispatch, useSelector} from 'react-redux';
 import './index.css';
 
-export default function GiaoHang(props) {
-    const [hoten, setHoten] = useState(ThongTinGiaoHang.hoten)
-    const [diachi, setDiachi] = useState(ThongTinGiaoHang.diachi)
-    const [phuong, setPhuong] = useState(ThongTinGiaoHang.phuong)
-    const [quan, setQuan] = useState(ThongTinGiaoHang.quan)
-    const [sodienthoai, setSodienthoai] = useState(ThongTinGiaoHang.sodienthoai)
+export default function Form(props) {
+    const [hoten, setHoten] = useState("")
+    const [diachi, setDiachi] = useState("")
+    const [phuong, setPhuong] = useState("")
+    const [quan, setQuan] = useState("")
+    const [sodienthoai, setSodienthoai] = useState("")
     const dispatch = useDispatch();
     const GiaoHangne = (e) => {
         e.preventDefault();
