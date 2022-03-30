@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import CheckOut from '../../components/checkoutstep';
+import Topbar from '../../components/Topbar/Topbar';
 
 export const PayPage = (props) => {
     const [PhuongThucThanhToan, setPhuongThucThanhToan] = useState('PayPal')
@@ -9,6 +10,7 @@ export const PayPage = (props) => {
     }
     return (
         <div>
+            <Topbar/>
             <CheckOut step1 step2 step3></CheckOut>
             <form className="form" onSubmit={ThanhToanne}>
                 <div>

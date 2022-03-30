@@ -18,23 +18,26 @@ export const HomePage = () => {
         <div className="topbar">
           <nav>
             <h2 className="logo">
-              ComBo<span> UuDai</span>
+              <Link to="/comboDetail">ComBo<span> UuDai</span></Link>
             </h2>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <Link to="/booking">Home</Link>
               </li>
               <li>
-                <a href="#">About Us</a>
+                <Link to="/hotel">Home</Link>
               </li>
               <li>
-                <a href="#">Services</a>
+                <Link to="/comboDetail">Home</Link>
               </li>
               <li>
-                <a href="#">Skills</a>
+                <Link to="/form">Home</Link>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <Link to="/pay">Home</Link>
+              </li>
+              <li>
+                <Link to="/success">Home</Link>
               </li>
             </ul>
             <div>

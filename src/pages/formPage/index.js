@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import CheckOut from '../../components/checkoutstep';
 import {useDispatch, useSelector} from 'react-redux';
 import './index.css';
+import Topbar from '../../components/Topbar/Topbar';
 
 export default function Form(props) {
     const [hoten, setHoten] = useState("")
@@ -16,6 +17,7 @@ export default function Form(props) {
     }
     return (
         <div>
+            <Topbar/>
             <CheckOut step1 step2></CheckOut>
             <form className="form" onSubmit={GiaoHangne}>
                 <div>
