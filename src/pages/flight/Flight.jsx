@@ -1,8 +1,7 @@
 import { Add } from "@mui/icons-material";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Chart from "../../components/chart/Chart";
 import "./flight.css";
-import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { flightData } from "../../dummyData";
 

@@ -1,15 +1,9 @@
 import "./sidebar.css";
 import {
   Home,
-  Timeline,
-  TrendingUp,
-  PersonOutline,
-  Storefront,
   AttachMoney,
-  BarChart,
   ConnectingAirports,
   MapsHomeWork,
-  TravelExplore,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 

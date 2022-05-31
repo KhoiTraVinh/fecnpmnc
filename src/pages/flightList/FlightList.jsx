@@ -9,7 +9,7 @@ export default function FlightList() {
   const [data, setData] = useState(flightRows);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.ID != id));
+    setData(data.filter((item) => item.ID !== id));
   };
 
   const columns = [
