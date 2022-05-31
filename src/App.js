@@ -4,12 +4,12 @@ import Home from "./pages/home/Home";
 import "./app.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import UserList from "./pages/userList/UserList";
-import User from "./pages/user/User";
-import NewUser from "./pages/newUser/NewUser";
-import ProductList from "./pages/productList/ProductList";
-import Product from "./pages/product/Product";
-import NewProduct from "./pages/newProduct/NewProduct";
+import HotelList from "./pages/hotelList/HotelList";
+import Hotel from "./pages/hotel/Hotel";
+import NewHotel from "./pages/newHotel/NewHotel";
+import FlightList from "./pages/flightList/FlightList";
+import Flight from "./pages/flight/Flight";
+import NewFlight from "./pages/newFlight/NewFlight";
 import Transaction from "./pages/transaction/Transaction";
 import Login from "./pages/login/Login.jsx";
 import TransactionInfo from "./pages/transactionInfo/TransactionInfo";
@@ -31,26 +31,26 @@ function App() {
                 <Home />
               </Route>
 
-              {/* User page */}
-              <Route path="/users">
-                <UserList />
+              {/* Hotel page */}
+              <Route path="/hotels">
+                <HotelList />
               </Route>
-              <Route path="/user/:userId">
-                <User />
+              <Route path="/hotel/:hotelId">
+                <Hotel />
               </Route>
-              <Route path="/newUser">
-                <NewUser />
+              <Route path="/newhotel">
+                <NewHotel />
               </Route>
 
-              {/* Products page */}
-              <Route path="/products">
-                <ProductList />
+              {/* flight page */}
+              <Route path="/flights">
+                <FlightList />
               </Route>
-              <Route path="/product/:productId">
-                <Product />
+              <Route path="/flight/:flightID">
+                <Flight />
               </Route>
-              <Route path="/newproduct">
-                <NewProduct />
+              <Route path="/newflight">
+                <NewFlight />
               </Route>
 
               {/* Transactions page */}

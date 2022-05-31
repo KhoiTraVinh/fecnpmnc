@@ -1,0 +1,82 @@
+.newFlight {
+  min-width: 0;
+  flex: 4;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
+  padding: 50px;
+  -webkit-box-shadow: 0px 8px 22px -9px rgba(0, 0, 0, 0.67);
+  box-shadow: 0px 8px 22px -9px rgba(0, 0, 0, 0.67);
+}
+
+.newFlightTitle {
+  margin-left: 15px;
+}
+
+.newFlightForm {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.newFlightItemLeft {
+  width: 100%;
+  flex: 1;
+}
+
+.newFlightItemRight {
+  width: 100%;
+  flex: 1;
+}
+
+.newFlightItem {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.newFlightItem > label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: grey;
+}
+
+.newFlightItem > input {
+  height: 20px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 7px;
+}
+
+.newFlightGender > input {
+  margin-top: 15px;
+}
+
+.newFlightGender > label {
+  margin: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.newFlightSelect {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.newFlightButton {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: teal;
+  color: white;
+  margin-top: 37px;
+  margin-left: auto;
+  font-weight: 600;
+  cursor: pointer;
+}

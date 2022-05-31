@@ -1,55 +1,55 @@
-export const userData = [
+export const transactionNumData = [
   {
     name: "Jan",
-    "Active User": 4000,
+    "Giao dịch thành công": 4000,
   },
   {
     name: "Feb",
-    "Active User": 2600,
+    "Giao dịch thành công": 2600,
   },
   {
     name: "Mar",
-    "Active User": 2820,
+    "Giao dịch thành công": 2820,
   },
   {
     name: "Apr",
-    "Active User": 3760,
+    "Giao dịch thành công": 3760,
   },
   {
     name: "May",
-    "Active User": 6404,
+    "Giao dịch thành công": 6404,
   },
   {
     name: "Jun",
-    "Active User": 5200,
+    "Giao dịch thành công": 5200,
   },
   {
     name: "Jul",
-    "Active User": 4002,
+    "Giao dịch thành công": 4002,
   },
   {
     name: "Agu",
-    "Active User": 4902,
+    "Giao dịch thành công": 4902,
   },
   {
     name: "Seb",
-    "Active User": 3838,
+    "Giao dịch thành công": 3838,
   },
   {
     name: "Oct",
-    "Active User": 2521,
+    "Giao dịch thành công": 2521,
   },
   {
     name: "Nov",
-    "Active User": 6772,
+    "Giao dịch thành công": 6772,
   },
   {
     name: "Dec",
-    "Active User": 4020,
+    "Giao dịch thành công": 4020,
   },
 ];
 
-export const productData = [
+export const flightData = [
   {
     name: "Jan",
     Sales: 4000,
@@ -76,96 +76,138 @@ export const productData = [
   },
 ];
 
-export const userRows = [
+export const hotelRows = [
   {
-    id: 1,
-    username: "Thuc Pham",
-    avatar: "/images/avatar.jpg",
-    email: "Thuc@gmail.com",
-    status: "active",
-    transaction: "$500",
+    ID: 1,
+    hotelname: "Thuc Pham",
+    avatar:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    title: "Khách sạn 5 sao",
+    address: "123 đường 321 - Hà Lội",
+    phone: "0123321312",
+    roomtype: "VIP",
+    price: "$500",
   },
   {
-    id: 2,
-    username: "Thuc Pham",
-    avatar: "/images/avatar.jpg",
-    email: "Thuc@gmail.com",
-    status: "active",
-    transaction: "$500",
+    ID: 2,
+    hotelname: "Thuc Pham",
+    avatar:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    title: "Khách sạn 5 sao",
+    address: "123 đường 321 - Hà Lội",
+    phone: "0123321312",
+    roomtype: "VIP",
+    price: "$500",
   },
   {
-    id: 3,
-    username: "Thuc Pham",
-    avatar: "/images/avatar.jpg",
-    email: "Thuc@gmail.com",
-    status: "active",
-    transaction: "$500",
+    ID: 3,
+    hotelname: "Thuc Pham",
+    avatar:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    title: "Khách sạn 5 sao",
+    address: "123 đường 321 - Hà Lội",
+    phone: "0123321312",
+    roomtype: "VIP",
+    price: "$500",
   },
   {
-    id: 4,
-    username: "Thuc Pham",
-    avatar: "/images/avatar.jpg",
-    email: "Thuc@gmail.com",
-    status: "active",
-    transaction: "$500",
+    ID: 4,
+    hotelname: "Thuc Pham",
+    avatar:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    title: "Khách sạn 5 sao",
+    address: "123 đường 321 - Hà Lội",
+    phone: "0123321312",
+    roomtype: "VIP",
+    price: "$500",
+  },
+  {
+    ID: 5,
+    hotelname: "Thuc Pham",
+    avatar:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    title: "Khách sạn 5 sao",
+    address: "123 đường 321 - Hà Lội",
+    phone: "0123321312",
+    roomtype: "VIP",
+    price: "$500",
   },
 ];
 
-export const productRows = [
+export const flightRows = [
   {
-    id: 1,
-    name: "Gucci Aria",
-    img: "/images/avatar.jpg",
-    stock: 123,
+    ID: "1",
+    seat: "Thương gia",
+    ariline: "VNE",
+    startpoint: "Hà Lội",
+    endpoint: "HCM",
+    price: 5000,
+    title: "VietNam Airline",
     status: "active",
-    price: "$500",
+    img: "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
   },
   {
-    id: 2,
-    name: "Gucci Aria",
-    img: "/images/avatar.jpg",
-    stock: 123,
+    ID: "2",
+    seat: "Thương gia",
+
+    ariline: "VNE",
+    startpoint: "Hà Lội",
+    endpoint: "HCM",
+    price: 5000,
+    title: "VietNam Airline",
     status: "active",
-    price: "$500",
+
+    img: "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
   },
   {
-    id: 3,
-    name: "Gucci Aria",
-    img: "/images/avatar.jpg",
-    stock: 123,
+    ID: "3",
+    seat: "Thương gia",
+
+    ariline: "VNE",
+    startpoint: "Hà Lội",
+    endpoint: "HCM",
+    price: 5000,
+    title: "VietNam Airline",
     status: "active",
-    price: "$500",
+
+    img: "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
   },
   {
-    id: 4,
-    name: "Gucci Aria",
-    img: "/images/avatar.jpg",
-    stock: 123,
+    ID: "4",
+    seat: "Thương gia",
+
+    ariline: "VNE",
+    startpoint: "Hà Lội",
+    endpoint: "HCM",
+    price: 5000,
+    title: "VietNam Airline",
     status: "active",
-    price: "$500",
+
+    img: "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
   },
   {
-    id: 5,
-    name: "Gucci Aria",
-    img: "/images/avatar.jpg",
-    stock: 123,
+    ID: "5",
+    seat: "Thương gia",
+
+    ariline: "VNE",
+    startpoint: "Hà Lội",
+    endpoint: "HCM",
+    price: 5000,
+    title: "VietNam Airline",
     status: "active",
-    price: "$500",
+
+    img: "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
   },
   {
-    id: 6,
-    name: "Gucci Aria",
-    img: "/images/avatar.jpg",
-    stock: 123,
+    ID: "6",
+    seat: "Thương gia",
+    ariline: "VNE",
+    startpoint: "Hà Lội",
+    endpoint: "HCM",
+    price: 5000,
+    title: "VietNam Airline",
     status: "active",
-    price: "$500",
-  },
-  {
-    id: 7,
-    name: "Gucci Aria",
-    img: "/images/avatar.jpg",
-    stock: 123,
-    status: "active",
-    price: "$500",
+
+    img: "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
   },
 ];

@@ -1,9 +1,27 @@
-.home{
-      min-width: 0;
-      flex: 4;
+.home {
+  min-width: 0;
+  flex: 4;
 }
 
-.homeWidgets{
-      display: flex;
-      margin: 20px;
+.homeChart {
+  display: flex;
+  flex-direction: column;
+}
+
+.homeChartTop {
+  display: flex;
+  width: 100vw - 250px;
+}
+
+.homeChartTopLeft {
+  width: 50%;
+}
+
+.homeChartTopRight {
+  width: 50%;
+}
+
+.homeWidgets {
+  display: flex;
+  margin: 20px;
 }

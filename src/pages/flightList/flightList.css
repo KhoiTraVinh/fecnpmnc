@@ -1,4 +1,4 @@
-.productList {
+.flightList {
   flex: 4;
   margin-left: 20px;
   margin-right: 20px;
@@ -8,12 +8,19 @@
   border: none;
 }
 
-.productListItem {
+.flightListTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.flightListItem {
   display: flex;
   align-items: center;
 }
 
-.productListImg {
+.flightListImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -21,7 +28,7 @@
   object-fit: cover;
 }
 
-.productListAddButton {
+.flightListAddButton {
   border-radius: 10px;
   background-color: rgb(126, 185, 126);
   border: none;
@@ -33,7 +40,7 @@
   align-items: center;
 }
 
-.productListEdit {
+.flightListEdit {
   border-radius: 10px;
   background-color: rgb(126, 185, 126);
   border: none;
@@ -43,7 +50,7 @@
   margin-right: 12px;
 }
 
-.productListDelete {
+.flightListDelete {
   color: rgb(253, 31, 105);
   cursor: pointer;
 }

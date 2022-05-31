@@ -1,19 +1,19 @@
-.product {
+.flight {
   flex: 4;
   padding: 20px;
   min-width: 0;
 }
 
-.productTitleContainer {
+.flightTitleContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.productAddButton {
+.flightAddButton {
   display: flex;
   align-items: center;
-  width: 80px;
+  width: 110px;
   border: none;
   padding: 5px;
   background-color: teal;
@@ -23,15 +23,15 @@
   font-size: 16px;
 }
 
-.productTop {
+.flightTop {
   display: flex;
 }
 
-.productTopLeft {
+.flightTopLeft {
   flex: 3;
 }
 
-.productTopRight {
+.flightTopRight {
   flex: 2;
   padding: 20px;
   margin: 20px;
@@ -43,18 +43,18 @@
   flex-direction: column;
 }
 
-.productInfoTop {
+.flightInfoTop {
   display: flex;
   align-items: center;
 }
 
-.productIcon {
+.flightIcon {
   margin-top: 2px;
   margin-right: 5px;
   font-size: 16px !important;
 }
 
-.productInfoImg {
+.flightInfoImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -63,35 +63,37 @@
   margin-right: 20px;
 }
 
-.productName {
+.flightName {
   font-weight: 600;
 }
 
-.productInfoBottom {
+.flightInfoBottom {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-top: 10px;
 }
 
-.productInfoItem {
+.flightInfoItem {
   margin-right: 25px;
   width: 130px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
 }
 
-.productInfoKey {
+.flightInfoKey {
   margin-top: 7px;
+  flex: 1;
 }
 
-.productInfoValue {
+.flightInfoValue {
   font-weight: 300;
   margin-top: 7px;
+  flex: 1;
 }
 
-.productTitleBottom {
+.flightTitleBottom {
   font-size: 28px;
   font-weight: 600;
   color: rgb(128, 128, 128);
@@ -99,7 +101,7 @@
   margin-top: 20px;
 }
 
-.productBottom {
+.flightBottom {
   flex: 1;
   padding-top: 14px !important;
   padding: 20px;
@@ -109,58 +111,66 @@
   box-shadow: 0px 8px 22px -9px rgba(0, 0, 0, 0.67);
 }
 
-.productForm {
+.flightForm {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
 }
 
-.productFormLeft {
+.flightFormLeft {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.productFormLeft > label {
+.flightFormLeft > label {
   margin-bottom: 10px;
   color: rgb(97, 97, 97);
+  width: 40%;
 }
 
-.productFormLeft > input {
+.flightFormLeft > input {
   margin-bottom: 10px;
+  width: 40%;
   border: none;
   padding: 5px;
   border-bottom: 1px solid #555;
   font-weight: 300;
 }
 
-.productFormLeft > select {
-  margin-bottom: 10px;
-}
-
-.productFormMiddle {
+.flightFormRight {
+  flex: 1;
   display: flex;
+
   flex-direction: column;
 }
 
-.productFormMiddle > label {
+.flightFormRight > label {
   margin-bottom: 10px;
   color: rgb(97, 97, 97);
+  width: 40%;
 }
 
-.productFormMiddle > input {
+.flightFormRight > input {
   margin-bottom: 10px;
+  width: 40%;
+
   border: none;
   padding: 5px;
   border-bottom: 1px solid #555;
   font-weight: 300;
 }
 
-.productFormRight {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.flightFormRight > select {
+  margin-bottom: 10px;
+  width: 40%;
 }
 
-.productUpload {
+.Active {
+  color: rgb(97, 97, 97);
+  font-weight: 300;
+}
+
+.flightUpload {
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 600;
@@ -172,21 +182,21 @@
   margin-right: 10px;
 }
 
-.productUpload > label {
+.flightUpload > label {
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 600;
   color: grey;
 }
 
-.productUpload > input {
+.flightUpload > input {
   height: 20px;
   padding: 10px;
   border: 1px solid grey;
   border-radius: 7px;
 }
 
-/* .productUploadImg {
+/* .flightUploadImg {
   width: 100px;
   height: 100px;
   border-radius: 10px;
@@ -194,8 +204,11 @@
   margin-right: 20px;
 } */
 
-.productButton {
+.flightButton {
   border: none;
+  margin-left: 80%;
+  width: 150px;
+  height: 35px;
   padding: 5px;
   border-radius: 10px;
   background-color: teal;
