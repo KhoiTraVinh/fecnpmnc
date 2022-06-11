@@ -1,15 +1,36 @@
 import TextField from "@mui/material/TextField";
+import React, { useState, useEffect } from 'react'
 import Autocomplete from "@mui/material/Autocomplete";
-import * as React from "react";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DatePicker from "@mui/lab/DatePicker";
-import { Link } from "react-router-dom";
 import "./bookingForm.css";
+import { useDispatch } from 'react-redux';
+import { CreateFlight } from '../../actions/FlightAction';
 import { useHistory } from "react-router-dom";
 
 export const BookingForm = () => {
   const [value, setValue] = React.useState([null, null]);
+  const [to, setTo] = useState('');
+  const [from, setFrom] = useState('');
+  const [peo, setPeo] = useState('');
+  const [chillren, setChillren] = useState('');
+  const [typeSeat, setTypeSeat] = useState('');
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const FlightCreated = (e) => {
+    e.preventDefault();
+    dispatch(CreateFlight({
+      to,
+      from,
+      peo,
+      chillren,
+      typeSeat,
+      value,
+    }));
+    history.push("/booking")
+  };
+
 
   const places = [
     { label: "Hà Nội" },
@@ -22,17 +43,17 @@ export const BookingForm = () => {
   ];
 
   const peoNum = [
-    { number: 0 },
-    { number: 1 },
-    { number: 2 },
-    { number: 3 },
-    { number: 4 },
-    { number: 5 },
-    { number: 6 },
-    { number: 7 },
-    { number: 8 },
-    { number: 9 },
-    { number: 10 },
+    { number: "0" },
+    { number: "1" },
+    { number: "2" },
+    { number: "3" },
+    { number: "4" },
+    { number: "5" },
+    { number: "6" },
+    { number: "7" },
+    { number: "8" },
+    { number: "9" },
+    { number: "10" },
   ];
 
   const seat = [
@@ -54,6 +75,7 @@ export const BookingForm = () => {
               className="comboboxPlace"
               options={places}
               sx={{ width: 250 }}
+              onChange={(event, value) => setFrom(value.label)}
               renderInput={(params) => <TextField {...params} label="From" />}
             />
           </div>
@@ -64,6 +86,7 @@ export const BookingForm = () => {
               disablePortal
               className="comboboxPlace"
               options={places}
+              onChange={(event, value) => setTo(value.label)}
               sx={{ width: 250 }}
               renderInput={(params) => <TextField {...params} label="To" />}
             />
@@ -76,6 +99,7 @@ export const BookingForm = () => {
               className="comboboxPlace"
               options={peoNum.map((option) => option.number)}
               sx={{ width: 160 }}
+              onChange={(event, value) => setPeo(value)}
               renderInput={(params) => (
                 <TextField {...params} label="Người lớn" />
               )}
@@ -88,6 +112,7 @@ export const BookingForm = () => {
               disablePortal
               className="comboboxPlace"
               options={peoNum.map((option) => option.number)}
+              onChange={(event, value) => setChillren(value)}
               sx={{ width: 160 }}
               renderInput={(params) => <TextField {...params} label="Trẻ em" />}
             />
@@ -103,8 +128,8 @@ export const BookingForm = () => {
                     label="Basic example"
                     className="comboboxPlace"
                     value={value}
-                    onChange={(newValue) => {
-                      setValue(newValue);
+                    onChange={(newvalue) => {
+                      setValue(newvalue);
                     }}
                     renderInput={(params) => <TextField {...params} />}
                   />
@@ -118,15 +143,14 @@ export const BookingForm = () => {
                 className="comboboxPlace"
                 options={seat}
                 sx={{ width: 250 }}
+                onChange={(event, value) => setTypeSeat(value.label)}
                 renderInput={(params) => (
                   <TextField {...params} label="Hạng ghế" />
                 )}
               />
             </div>
           </div>
-          <Link to="/booking">
-            <button className="search">TIẾP THEO</button>
-          </Link>
+          <button className="search" onClick={FlightCreated}>TIẾP THEO</button>
         </div>
       </div>
     </div>

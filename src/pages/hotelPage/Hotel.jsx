@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, } from "react";
 import "./hotel.css";
 import Topbar from "../../components/Topbar/Topbar";
 import Footer from "../../components/Footer/Footer";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import { useDispatch, useSelector } from 'react-redux';
 import {
   LocationOn,
   LocalParking,
@@ -11,13 +12,6 @@ import {
   LocalBar,
   DirectionsBusFilled,
   Sailing,
-  PriorityHigh,
-  People,
-  HotelOutlined,
-  AccountBalanceWallet,
-  Wifi,
-  PlusOne,
-  Add,
   ReportGmailerrorred,
 } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
@@ -25,10 +19,21 @@ import DateRangePicker from "@mui/lab/DateRangePicker";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import Box from "@mui/material/Box";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { getOneHotel } from "../../actions/HotelAction";
+import RoomItem from "../../components/roomitem";
 
-export const Hotel = () => {
+export const Hotel = (props) => {
   const [value, setValue] = React.useState([null, null]);
+
+  const onehotel = useSelector((state) => state.GetOneHotel);
+  const { hotel } = onehotel;
+  const dispatch = useDispatch();
+  const { id } = useParams();
+
+  useEffect(() => {
+    dispatch(getOneHotel(id));
+  }, [dispatch]);
 
   const itemData = [
     {
@@ -87,11 +92,10 @@ export const Hotel = () => {
       <div className="hotelContent">
         <div className="hotelOverview">
           <div className="hotelOverviewTitle">
-            <span className="hotelName">Khách sạn Corvin</span>
+            <span className="hotelName">{hotel?.Name}</span>
             <div className="address">
               {" "}
-              <LocationOn className="hotelIcon" /> 21 thùy vân, phường 2, Tp
-              Vũng Tàu, Bà rịa – Vũng Tàu
+              <LocationOn className="hotelIcon" />{hotel?.Address}
             </div>
           </div>
           <div className="hotelOverviewCover">
@@ -200,153 +204,13 @@ export const Hotel = () => {
               </LocalizationProvider>
             </div>
           </div>
-          <div className="roomBookingBottom">
-            <img src="./img/room.jpg" alt="" className="roomBookingBottomImg" />
-            <div className="roomBookingBottomContent">
-              <div className="left">
-                <span className="leftTitle">Phòng đơn - đôi</span>
-                <h2 className="leftDet">
-                  <People className="BottomIcon" />2 Người
-                </h2>
-                <h2 className="leftDet">
-                  <HotelOutlined className="BottomIcon" />1 Giường đôi
-                </h2>
-
-                <h2 className="leftDet">
-                  <AccountBalanceWallet className="BottomIcon" />
-                  Hoàn tiền 1 phần
-                </h2>
-
-                <h2 className="leftDet">
-                  <Wifi className="BottomIcon" />
-                  Wifi miễn phí
-                </h2>
+          <>
+            {hotel?.Room.map((room) => (
+              <div key={room._id}>
+                  <RoomItem room={room}></RoomItem>
               </div>
-              <div className="right">
-                <h2 className="right1">
-                  <Add className="BottomIcon1" /> 500.000 VND &nbsp;
-                </h2>
-                <h2 className="right2">/ người</h2>
-              </div>
-            </div>
-            <div className="roomBookingBottomBookingButton">
-              <Link to="/comboDetail">
-                <button className="buttonB">Đặt ngay</button>
-              </Link>
-              <h2 className="buttonDetail">5 Phòng trống</h2>
-            </div>
-          </div>
-
-          <div className="roomBookingBottom">
-            <img src="./img/room.jpg" alt="" className="roomBookingBottomImg" />
-            <div className="roomBookingBottomContent">
-              <div className="left">
-                <span className="leftTitle">Phòng đơn - đôi</span>
-                <h2 className="leftDet">
-                  <People className="BottomIcon" />2 Người
-                </h2>
-                <h2 className="leftDet">
-                  <HotelOutlined className="BottomIcon" />1 Giường đôi
-                </h2>
-
-                <h2 className="leftDet">
-                  <AccountBalanceWallet className="BottomIcon" />
-                  Hoàn tiền 1 phần
-                </h2>
-
-                <h2 className="leftDet">
-                  <Wifi className="BottomIcon" />
-                  Wifi miễn phí
-                </h2>
-              </div>
-              <div className="right">
-                <h2 className="right1">
-                  <Add className="BottomIcon1" /> 500.000 VND &nbsp;
-                </h2>
-                <h2 className="right2">/ người</h2>
-              </div>
-            </div>
-            <div className="roomBookingBottomBookingButton">
-              <Link to="/comboDetail">
-                <button className="buttonB">Đặt ngay</button>
-              </Link>
-              <h2 className="buttonDetail">5 Phòng trống</h2>
-            </div>
-          </div>
-
-          <div className="roomBookingBottom">
-            <img src="./img/room.jpg" alt="" className="roomBookingBottomImg" />
-            <div className="roomBookingBottomContent">
-              <div className="left">
-                <span className="leftTitle">Phòng đơn - đôi</span>
-                <h2 className="leftDet">
-                  <People className="BottomIcon" />2 Người
-                </h2>
-                <h2 className="leftDet">
-                  <HotelOutlined className="BottomIcon" />1 Giường đôi
-                </h2>
-
-                <h2 className="leftDet">
-                  <AccountBalanceWallet className="BottomIcon" />
-                  Hoàn tiền 1 phần
-                </h2>
-
-                <h2 className="leftDet">
-                  <Wifi className="BottomIcon" />
-                  Wifi miễn phí
-                </h2>
-              </div>
-              <div className="right">
-                <h2 className="right1">
-                  <Add className="BottomIcon1" /> 500.000 VND &nbsp;
-                </h2>
-                <h2 className="right2">/ người</h2>
-              </div>
-            </div>
-            <div className="roomBookingBottomBookingButton">
-              <Link to="/comboDetail">
-                <button className="buttonB">Đặt ngay</button>
-              </Link>
-              <h2 className="buttonDetail">5 Phòng trống</h2>
-            </div>
-          </div>
-
-          <div className="roomBookingBottom">
-            <img src="./img/room.jpg" alt="" className="roomBookingBottomImg" />
-            <div className="roomBookingBottomContent">
-              <div className="left">
-                <span className="leftTitle">Phòng đơn - đôi</span>
-                <h2 className="leftDet">
-                  <People className="BottomIcon" />2 Người
-                </h2>
-                <h2 className="leftDet">
-                  <HotelOutlined className="BottomIcon" />1 Giường đôi
-                </h2>
-
-                <h2 className="leftDet">
-                  <AccountBalanceWallet className="BottomIcon" />
-                  Hoàn tiền 1 phần
-                </h2>
-
-                <h2 className="leftDet">
-                  <Wifi className="BottomIcon" />
-                  Wifi miễn phí
-                </h2>
-              </div>
-              <div className="right">
-                <h2 className="right1">
-                  <Add className="BottomIcon1" /> 500.000 VND &nbsp;
-                </h2>
-                <h2 className="right2">/ người</h2>
-              </div>
-            </div>
-            <div className="roomBookingBottomBookingButton">
-              <Link to="/comboDetail">
-                <button className="buttonB">Đặt ngay</button>
-              </Link>
-              <h2 className="buttonDetail">5 Phòng trống</h2>
-            </div>
-          </div>
+            ))}
+          </>
         </div>
       </div>
       <Footer />

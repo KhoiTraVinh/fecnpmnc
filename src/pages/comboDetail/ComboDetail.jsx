@@ -2,6 +2,7 @@ import React from "react";
 import Topbar from "../../components/Topbar/Topbar";
 import Footer from "../../components/Footer/Footer";
 import "./comboDetail.css";
+import {PayPalButton} from 'react-paypal-button-v2'
 import {
   ArrowRightAlt,
   CallToAction,
@@ -132,7 +133,9 @@ export const ComboDetail = () => {
             </div>
           </div>
         </div>
-        <div className="comboDetailContentRight">dsadasdsd</div>
+        <div className="comboDetailContentRight">
+          <PayPalButton amount={1000} onSuccess={"kkkk"}></PayPalButton>
+        </div>
       </div>
 
       <Footer />

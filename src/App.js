@@ -26,7 +26,7 @@ function App() {
       <Route path="/booking">
         <BookingPage />
       </Route>
-      <Route path="/hotel">
+      <Route path="/hotel/:id">
         <Hotel />
       </Route>
       <Route path="/comboDetail">
