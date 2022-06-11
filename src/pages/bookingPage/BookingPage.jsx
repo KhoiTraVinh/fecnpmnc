@@ -33,7 +33,7 @@ export const BookingPage = () => {
 
   useEffect(() => {
     dispatch(getHotel());
-  }, [dispatch]);
+  }, []);
 
 
   return (
@@ -47,7 +47,7 @@ export const BookingPage = () => {
           <div className="bookingChange">Thay đổi tìm kiếm chuyến bay</div>
         </div>
         <div className="bookingDetailBottom">
-          {flight?.Start.toString()} - {flight?.End.toString()}
+          {flight?.Start} - {flight?.End}
         </div>
       </div>
       <div className="bookingContent">
@@ -65,7 +65,7 @@ export const BookingPage = () => {
                   Chi tiết chuyến bay
                 </span>
                 <div className="airlinecover">
-                  <h2 className="airline">Hãng hàng không: {flight.Airlines}</h2>
+                  <h2 className="airline">Hãng hàng không: {flight?.Airlines}</h2>
                 </div>
               </div>
               <div className="titleBottom">
@@ -74,7 +74,7 @@ export const BookingPage = () => {
                   <h2 className="flyDirection">{flight?.Type}</h2>
                 </div>
                 <div className="titleBottom1">
-                  <h1 className="flyTime">{flight?.Start.toString()}</h1>
+                  <h1 className="flyTime">{flight?.Start}</h1>
                   <h2 className="flyDirection">{flight?.From}</h2>
                 </div>
                 <div className="titleBottom1">
