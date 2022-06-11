@@ -16,7 +16,21 @@ import {
   Wifi,
 } from "@mui/icons-material";
 
+import { useSelector } from 'react-redux';
+import { Room } from "@material-ui/icons";
+
 export const ComboDetail = () => {
+
+
+  const FlightDetail = useSelector((state) => state.FlightCreate);
+  const { flight } = FlightDetail;
+  const onehotel = useSelector((state) => state.GetOneHotel);
+  const { hotel } = onehotel;
+  const getRoom = useSelector((state) => state.GetRoom);
+  const { room } = getRoom;
+  console.log(flight);
+  console.log(hotel);
+  console.log(room);
   return (
     <div className="comboDetail">
       <Topbar />
@@ -26,13 +40,13 @@ export const ComboDetail = () => {
             <span className="comboDetailInfo">Chi tiết chuyến Combo</span>
             <div className="comboFly">
               <FlightTakeoff className="comboDetailTopIcon" />
-              Đà Nẵng (DAD) → TP HCM (SGN) • 30 Th03 2022 • 1 người lớn •
+              {flight.From} → {flight.To} • {flight.Date} • 1 người lớn •
               Economy
             </div>
           </div>
           <div className="comboHotel">
             <MapsHomeWork className="comboDetailTopIcon" />
-            Nouveau Happy Inn • 30 Th03 2022 - 1 Th04 2022 • 2 đêm • 1 phòng • 1
+            {hotel.Name} • 30 Th03 2022 - 1 Th04 2022 • 2 đêm • 1 phòng • 1
             khách
           </div>
         </div>
@@ -43,34 +57,34 @@ export const ComboDetail = () => {
           <div className="FlyDetail">
             <span className="FlyDetail1">
               <FlightTakeoff className="contentCoverIcon" />
-              Đà Nẵng (DAD)
+              {flight.From}
               <ArrowRightAlt className="contentCoverIcon1" />
-              TP HCM (SGN)
+              {flight.To}
             </span>
             <hr />
             <div className="FlyDetail2">
-              <span className="comboFlyDate">Wed, 30 Mar 2022</span>
+              <span className="comboFlyDate">{flight.Date}</span>
               <div className="FlyDetailInfo">
                 <div className="airport">
                   <img src="./img/a.png" alt="" className="airportImg" />
                   <div className="name">
-                    <h2 className="name1">VietNam Airlines</h2>
+                    <h2 className="name1">{flight.Airlines}</h2>
                     <h2 className="name2">Khuyến mãi</h2>
                   </div>
                 </div>
                 <div className="timeFly">
                   <div className="timeFly1">
-                    <h2 className="timeFly1Time">08:10</h2>
-                    <h2 className="timeFly1TimePlc">DAD</h2>
+                    <h2 className="timeFly1Time">{flight.Start}</h2>
+                    <h2 className="timeFly1TimePlc">{flight.From}</h2>
                   </div>
                   <div className="timeFly2">
-                    <h2 className="timeFly2Time">1h 25m</h2>
+                    <h2 className="timeFly2Time">{flight.Time}</h2>
                     <hr className="coverHr" />
-                    <h2 className="timeFly2TimePlc">Bay thẳng</h2>
+                    <h2 className="timeFly2TimePlc">{flight.Landing}</h2>
                   </div>
                   <div className="timeFly1">
-                    <h2 className="timeFly1Time">08:10</h2>
-                    <h2 className="timeFly1TimePlc">DAD</h2>
+                    <h2 className="timeFly1Time">{flight.End}</h2>
+                    <h2 className="timeFly1TimePlc">{flight.To}</h2>
                   </div>
                 </div>
               </div>
@@ -84,7 +98,7 @@ export const ComboDetail = () => {
           <div className="HotelDetail">
             <div className="FlyDetail1">
               <Home className="contentCoverIcon" />
-              Quận 1, Thành phố Hồ Chí Minh
+              {hotel.Address}
             </div>
             <hr />
             <div className="HotelDetail2">
@@ -95,32 +109,31 @@ export const ComboDetail = () => {
                 <div className="room">
                   <img src="./img/room.jpg" alt="" className="roomImg" />
                   <div className="HotelName">
-                    <h2 className="HotelName1">Nouveau Happy Inn</h2>
+                    <h2 className="HotelName1">{hotel.Name}</h2>
                     <h2 className="HotelName2">
                       <LocationOn className="HotelIcon" />
-                      39 Bùi Thị Xuân, Phường Bến Thành, Phường Bến Thành, Quận
-                      1, Thành phố Hồ Chí Minh, Việt Nam, 711060
+                      {hotel.Address}
                     </h2>
 
                     <div className="HotelService">
                       <h2 className="HotelService1">
                         <CallToAction className="HotelIcon" />
-                        Máy lạnh
+                        {room.Name}
                       </h2>
 
                       <h2 className="HotelService1">
                         <Fastfood className="HotelIcon" />
-                        Lễ tân 24/24
+                        {room.Bed}
                       </h2>
 
                       <h2 className="HotelService1">
                         <ParkOutlined className="HotelIcon" />
-                        Chỗ đậu xe
+                        {room.Refund}
                       </h2>
 
                       <h2 className="HotelService1">
                         <Wifi className="HotelIcon" />
-                        Wifi
+                        {room.Wifi}
                       </h2>
                     </div>
                   </div>

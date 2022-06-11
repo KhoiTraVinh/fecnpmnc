@@ -1,7 +1,7 @@
 import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
 import { KhachHangDangNhapReducer, KhachHangDangKiReducer } from './reducers/CustomerReducer';
 import { CreateFlightReducer } from './reducers/FlightReducer';
-import { GetAllHotelReducer, GetOneHotelReducer } from './reducers/HotelReducer';
+import { GetAllHotelReducer, GetOneHotelReducer, GetRoomReducer } from './reducers/HotelReducer';
 import thunk from 'redux-thunk';
 const initialState = {
     DangNhap: {
@@ -16,6 +16,7 @@ const reducer = combineReducers({
     FlightCreate: CreateFlightReducer,
     GetAllHotel: GetAllHotelReducer,
     GetOneHotel: GetOneHotelReducer,
+    GetRoom: GetRoomReducer
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, initialState, composeEnhancer(applyMiddleware(thunk)));

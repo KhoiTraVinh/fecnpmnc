@@ -7,9 +7,16 @@ import {
     Wifi,
     Add,
   } from "@mui/icons-material";
+import { getRoom } from "../../actions/HotelAction";
+import { useDispatch } from 'react-redux';
 
 const RoomItem = (props) => {
+
     const { room } = props
+    const dispatch = useDispatch();
+    const OrderRoom = () => {
+        dispatch(getRoom(room));
+    };
     return (
         <div className="roomBookingBottom">
             <img src="../../img/room.jpg" alt="" className="roomBookingBottomImg" />
@@ -42,7 +49,7 @@ const RoomItem = (props) => {
             </div>
             <div className="roomBookingBottomBookingButton">
                 <Link to="/comboDetail">
-                    <button className="buttonB">Đặt ngay</button>
+                    <button className="buttonB" onClick={OrderRoom()}>Đặt ngay</button>
                 </Link>
                 <h2 className="buttonDetail">{room.EmptyRoom} Phòng trống</h2>
             </div>

@@ -47,3 +47,20 @@ export const getOneHotel = (hotelId) => async (dispatch) => {
         dispatch({ type: CUS_GETONEHOTEL_FAIL, payload: message });
     }
 };
+
+export const getRoom = (room) => async (dispatch) => {
+    dispatch({ type: 'CUS_GETROOM_REQUEST' });
+    try {
+        const  data = room
+        dispatch({
+            type: 'CUS_GETROOM_SUCCESS',
+            payload: data,
+        });
+    } catch (error) {
+        const message =
+            error.response && error.response.data.message
+                ? error.response.data.message
+                : error.message;
+        dispatch({ type: 'CUS_GETROOM_FAIL', payload: message });
+    }
+};

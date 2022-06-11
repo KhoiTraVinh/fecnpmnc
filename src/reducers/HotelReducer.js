@@ -32,3 +32,16 @@ export const GetOneHotelReducer = (state = {}, action) => {
             return state;
     }
 };
+
+export const GetRoomReducer = (state = {}, action) => {
+    switch (action.type) {
+        case 'CUS_GETROOM_REQUEST':
+            return { loading: true };
+        case 'CUS_GETROOM_SUCCESS':
+            return { loading: false, success: true, room: action.payload };
+        case 'CUS_GETROOM_FAIL':
+            return { loading: false, error: action.payload };
+        default:
+            return state;
+    }
+};
