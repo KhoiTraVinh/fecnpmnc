@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Topbar from "../../components/Topbar/Topbar";
 import Footer from "../../components/Footer/Footer";
 import "./comboDetail.css";
-import {PayPalButton} from 'react-paypal-button-v2'
+import { PayPalButton } from 'react-paypal-button-v2'
 import {
   ArrowRightAlt,
   CallToAction,
+  CheckCircleOutline,
+  ErrorOutline,
   Fastfood,
   FlightTakeoff,
   Home,
+  ListAlt,
   LocationCity,
   LocationOn,
   MapsHomeWork,
@@ -16,8 +19,8 @@ import {
   Wifi,
 } from "@mui/icons-material";
 
-import { useSelector } from 'react-redux';
-import { Room } from "@material-ui/icons";
+import { useDispatch, useSelector } from 'react-redux';
+import { Axios } from "axios";
 
 export const ComboDetail = () => {
 
@@ -28,9 +31,37 @@ export const ComboDetail = () => {
   const { hotel } = onehotel;
   const getRoom = useSelector((state) => state.GetRoom);
   const { room } = getRoom;
+  const [sdkReady, setSdkReady] = useState(false);
   console.log(flight);
   console.log(hotel);
   console.log(room);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const addPayPalScript = async () => {
+      const { data } = await Axios.get('https://servercnpmnc.herokuapp.com/api/config/paypal');
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.scr = `https://www.paypal.com/sdk/js?client-id=${data}`;
+      script.async = true;
+      script.onload = () => {
+        setSdkReady(true);
+      };
+      document.body.appendChild(script);
+    };
+    if(hotel){
+      if (hotel) {
+        if (!window.paypal) {
+          addPayPalScript();
+        } else {
+          setSdkReady(true);
+        }
+      }
+    }
+  }, [dispatch, sdkReady])
+
+  const Success = () => {
+    console.log("Mua Combo thanh cong");
+  }
   return (
     <div className="comboDetail">
       <Topbar />
@@ -147,7 +178,57 @@ export const ComboDetail = () => {
           </div>
         </div>
         <div className="comboDetailContentRight">
-          <PayPalButton amount={1000} onSuccess={"kkkk"}></PayPalButton>
+          <div className="comboDetailContentRightTop">
+            <span className="comboDetailContentRightTopTitle">
+              <ListAlt className="comboDetailContentRightIcon" />
+              Thông tin bổ sung
+            </span>
+            <hr />
+            <div className="comboDetailContentRightTopFlight">
+              <h2 className="flight">DAD - SGN</h2>
+              <div className="flightservice">
+                <h3 className="service1">
+                  <ErrorOutline className="serviceIcon" /> Không hoàn tiền
+                </h3>
+                <h3 className="service2">
+                  <CheckCircleOutline className="serviceIcon" /> Có áp dụng đổi
+                  lịch bay
+                </h3>
+              </div>
+            </div>
+            <div className="comboDetailContentRightTopHotel">
+              <h2 className="flight">Cozrum Lux Hotel</h2>
+
+              <div className="hotelservice">
+                <h3 className="service2">
+                  <CheckCircleOutline className="serviceIcon" />
+                  Có thể hoàn lại tiền
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className="comboDetailContentRightBottom">
+            <span className="comboDetailContentRightTopTitle">Tóm Tắt</span>
+            <hr />
+            <div className="summary">
+              <div className="flightsummary">
+                <h2 className="flightsummarytitle">
+                  Giá mua riêng máy bay và khách sạn
+                </h2>
+                <h2 className="flightsummaryprice">VND {hotel.Price}</h2>
+              </div>
+              <div className="combosummary">
+                <h2 className="flightsummarytitle">Ưu đãi combo</h2>
+                <h2 className="flightsummaryprice">VND -{hotel.Price - hotel.PriceDiscount}</h2>
+              </div>
+              <hr id="aa" />
+              <div className="flightsummary">
+                <h2 className="flightsummarytitle">Giá bạn trả</h2>
+                <h2 className="flightsummaryprice">VND {hotel.PriceDiscount}</h2>
+              </div>
+            </div>
+          </div>
+          <PayPalButton amount={hotel.PriceDiscount} onSuccess={Success()}></PayPalButton>
         </div>
       </div>
 
