@@ -15,7 +15,8 @@ export const BookingForm = () => {
   const [from, setFrom] = useState('');
   const [peo, setPeo] = useState('');
   const [chillren, setChillren] = useState('');
-  const [typeSeat, setTypeSeat] = useState('');
+  const [seatclass, setTypeSeat] = useState('');
+  const peonum = parseInt(peo) + parseInt(chillren);
   const dispatch = useDispatch();
   const history = useHistory();
   const FlightCreated = (e) => {
@@ -23,9 +24,8 @@ export const BookingForm = () => {
     dispatch(CreateFlight({
       to,
       from,
-      peo,
-      chillren,
-      typeSeat,
+      peonum,
+      seatclass,
       value,
     }));
     history.push("/booking")
@@ -40,6 +40,7 @@ export const BookingForm = () => {
     { label: "Đà Lạt" },
     { label: "Cao Bằng" },
     { label: "Hội An" },
+    { label: "Vũng Tàu" },
   ];
 
   const peoNum = [

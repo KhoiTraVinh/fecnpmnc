@@ -10,11 +10,15 @@ import {
 
 
 
-export const getHotel = () => async (dispatch) => {
+export const getHotel = (To) => async (dispatch) => {
     dispatch({ type: CUS_GETALLHOTEL_REQUEST });
     try {
         const { data } = await Axios.get(
-            'https://servercnpmnc.herokuapp.com/api/hotel'
+            'https://servercnpmnc.herokuapp.com/api/hotel',{
+                params: {
+                    "Address": To
+                }
+            }
         );
         dispatch({
             type: CUS_GETALLHOTEL_SUCCESS,

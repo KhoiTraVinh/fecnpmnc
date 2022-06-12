@@ -30,7 +30,9 @@ export const Hotel = (props) => {
   const { hotel } = onehotel;
   const dispatch = useDispatch();
   const { id } = useParams();
-
+  const filterRomm = hotel?.Room.filter((room) => {
+    return room.Reserved === false;
+  })
   useEffect(() => {
     dispatch(getOneHotel(id));
   }, [dispatch]);
@@ -205,7 +207,8 @@ export const Hotel = (props) => {
             </div>
           </div>
           <>
-            {hotel?.Room.map((room) => (
+            {filterRomm?.length === 0 && <div><h1 color="black">Out of room</h1></div>} 
+            {filterRomm?.map((room) => (
               <div key={room._id}>
                   <RoomItem room={room}></RoomItem>
               </div>

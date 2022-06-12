@@ -71,14 +71,13 @@ export const ComboDetail = () => {
             <span className="comboDetailInfo">Chi tiết chuyến Combo</span>
             <div className="comboFly">
               <FlightTakeoff className="comboDetailTopIcon" />
-              {flight.From} → {flight.To} • {flight.Date} • 1 người lớn •
-              Economy
+              {flight.From} → {flight.To} • {flight.Date} • {flight.peonum} người •
+              {flight.seatclass}
             </div>
           </div>
           <div className="comboHotel">
             <MapsHomeWork className="comboDetailTopIcon" />
-            {hotel.Name} • 30 Th03 2022 - 1 Th04 2022 • 2 đêm • 1 phòng • 1
-            khách
+            {hotel.Name} • 30 Th03 2022 - 1 Th04 2022 • 2 đêm • 1 phòng • {flight.peonum} khách
           </div>
         </div>
       </div>
@@ -185,7 +184,7 @@ export const ComboDetail = () => {
             </span>
             <hr />
             <div className="comboDetailContentRightTopFlight">
-              <h2 className="flight">DAD - SGN</h2>
+              <h2 className="flight">{flight.From} - {flight.To}</h2>
               <div className="flightservice">
                 <h3 className="service1">
                   <ErrorOutline className="serviceIcon" /> Không hoàn tiền

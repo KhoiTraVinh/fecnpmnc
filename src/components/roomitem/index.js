@@ -48,7 +48,7 @@ const RoomItem = (props) => {
                 </div>
             </div>
             <div className="roomBookingBottomBookingButton">
-                <Link to="/comboDetail">
+                <Link to="/form">
                     <button className="buttonB" onClick={OrderRoom()}>Đặt ngay</button>
                 </Link>
                 <h2 className="buttonDetail">{room.EmptyRoom} Phòng trống</h2>

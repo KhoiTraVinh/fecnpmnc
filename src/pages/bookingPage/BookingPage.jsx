@@ -30,10 +30,9 @@ export const BookingPage = () => {
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
-
   useEffect(() => {
-    dispatch(getHotel());
-  }, []);
+    dispatch(getHotel(flight?.To));
+  }, [dispatch]);
 
 
   return (
@@ -126,6 +125,7 @@ export const BookingPage = () => {
             Khách sạn
           </span>
           <div className="bookingHotel">
+            {hotels?.length === 0 && <div><h1 color="black">No Hotel Found</h1></div>}
             {hotels?.map((hotel) => (
               <div key={hotel._id}>
                 <HotelItem hotel={hotel}></HotelItem>

@@ -20,26 +20,6 @@ export const HomePage = () => {
             <h2 className="logo">
               <Link to="/">ComBo<span> UuDai</span></Link>
             </h2>
-            <ul>
-              <li>
-                <Link to="/booking">Home</Link>
-              </li>
-              <li>
-                <Link to="/hotel">Home</Link>
-              </li>
-              <li>
-                <Link to="/comboDetail">Home</Link>
-              </li>
-              <li>
-                <Link to="/form">Home</Link>
-              </li>
-              <li>
-                <Link to="/pay">Home</Link>
-              </li>
-              <li>
-                <Link to="/success">Home</Link>
-              </li>
-            </ul>
             <div>
               <div className="dropdown">
                 <Link className="btn" to="/DangNhap">

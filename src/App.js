@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import BookingPage from "./pages/bookingPage/BookingPage.jsx";
 
 import ComboDetail from "./pages/comboDetail/ComboDetail";
-import Form from "./pages/formPage";
+import BookingInfo from "./pages/formPage";
 import {PayPage} from './pages/payPage';
 import Success from "./pages/successPage";
 
@@ -33,7 +33,7 @@ function App() {
         <ComboDetail />
       </Route>
       <Route path="/form">
-        <Form />
+        <BookingInfo />
       </Route>
       <Route path="/pay">
         <PayPage />
