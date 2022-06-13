@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./bookingInfo.css";
 import { Link } from "react-router-dom";
 import {
@@ -13,8 +13,36 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Box from "@mui/material/Box";
+import { getInforCus } from "../../actions/PromotionAction";
+import { useDispatch } from "react-redux";
 
 export const BookingInfo = () => {
+  const [Ho, setHo] = useState('');
+  const [Ten, setTen] = useState('');
+  const [Sdt, setSdt] = useState('');
+  const [email, setemail] = useState('');
+  const [Ho1, setHo1] = useState('');
+  const [Ten1, setTen1] = useState('');
+  const [ngaysinh, setNgaysinh] = useState('');
+  const [email1, setemail1] = useState('');
+  const [cmnd, setCmnd] = useState('');
+  const [quoctinh, setQuoctinh] = useState('');
+  const dispatch = useDispatch();
+  const getInfo = (e) => {
+    e?.preventDefault();
+    console.log(Ho, Ten, Sdt, email, quoctinh);
+    dispatch(getInforCus({
+      Ho,
+      Ten,
+      Sdt,
+      email,
+      Ten1,
+      ngaysinh,
+      email1,
+      cmnd,
+      quoctinh,
+    }));
+  }
   return (
     <div className="bookingInfo">
       <div className="bookingInfoTopbar">
@@ -59,6 +87,8 @@ export const BookingInfo = () => {
                         type="text"
                         className="nameInput"
                         placeholder="VD: Nguyen"
+                        value={Ho}
+                        onChange={(e) => setHo(e.target.value)}
                       />
                       <h3 className="nameDetail">như trên CMND (không dấu)</h3>
                     </div>
@@ -68,6 +98,8 @@ export const BookingInfo = () => {
                         type="text"
                         className="nameInput"
                         placeholder="VD: Thi No"
+                        value={Ten}
+                        onChange={(e) => setTen(e.target.value)}
                       />
                       <h3 className="nameDetail">như trên CMND (không dấu)</h3>
                     </div>
@@ -75,7 +107,7 @@ export const BookingInfo = () => {
                   <div className="formTopContact">
                     <div className="formTopContactPhone">
                       <span className="firstName">Số điện thoại</span>
-                      <input type="text" className="nameInput" />
+                      <input type="text" className="nameInput" onChange={(e) => setSdt(e.target.value)} value={Sdt}/>
                       <h3 className="nameDetail">
                         VD: +84 901234567 trong đó (+84) là mã quốc gia và
                         901234567 là số di động
@@ -83,7 +115,7 @@ export const BookingInfo = () => {
                     </div>
                     <div className="formTopContactPhone">
                       <span className="firstName">Email</span>
-                      <input type="text" className="nameInput" />
+                      <input type="text" className="nameInput" onChange={(e) => setemail(e.target.value)} value={email}/>
                       <h3 className="nameDetail">VD: email@example.com</h3>
                     </div>
                   </div>
@@ -104,6 +136,7 @@ export const BookingInfo = () => {
                         type="text"
                         className="nameInput"
                         placeholder="VD: Nguyen"
+                        onChange={(e) => setHo1(e.target.value)} value={Ho1}
                       />
                       <h3 className="nameDetail">như trên CMND (không dấu)</h3>
                     </div>
@@ -113,6 +146,7 @@ export const BookingInfo = () => {
                         type="text"
                         className="nameInput"
                         placeholder="VD: Thi No"
+                        onChange={(e) => setTen1(e.target.value)} value={Ten1}
                       />
                       <h3 className="nameDetail">như trên CMND (không dấu)</h3>
                     </div>
@@ -128,6 +162,7 @@ export const BookingInfo = () => {
                           InputLabelProps={{
                             shrink: true,
                           }}
+                          onChange={(e) => setNgaysinh(e.target.value)} value={ngaysinh}
                         />
                       </Stack>
                       <h3 className="nameDetail1">
@@ -136,14 +171,14 @@ export const BookingInfo = () => {
                     </div>
                     <div className="formTopContactPhone">
                       <span className="firstName">Email</span>
-                      <input type="text" className="nameInput" />
+                      <input type="text" className="nameInput" onChange={(e) => setemail1(e.target.value)} value={email1}/>
                       <h3 className="nameDetail">VD: email@example.com</h3>
                     </div>
                   </div>
                   <div className="formTopContact">
                     <div className="formTopContactPhone">
                       <span className="firstName">Giấy tờ tùy thân</span>
-                      <input type="text" className="nameInput" />
+                      <input type="text" className="nameInput" onChange={(e) => setCmnd(e.target.value)} value={cmnd}/>
                       <h3 className="nameDetail">Số chứng minh nhân dân</h3>
                     </div>
                     <div className="formTopContactPhone">
@@ -153,6 +188,7 @@ export const BookingInfo = () => {
                         options={countries}
                         autoHighlight
                         getOptionLabel={(option) => option.label}
+                        onChange={(event, value) => setQuoctinh(value.label)}
                         renderOption={(props, option) => (
                           <Box
                             component="li"
@@ -185,7 +221,7 @@ export const BookingInfo = () => {
                   </div>
                 </form>
               </div>
-              <Link to="/comboDetail"><button className="continue">Tiếp tục</button></Link>
+              <Link to="/comboDetail"><button className="continue" onClick={getInfo()}>Tiếp tục</button></Link>
             </div>
             <div className="bookingInfoBodyWidgetRight">
               <div className="bookingInfoBodyWidgetRightTop">

@@ -3,6 +3,7 @@ import { KhachHangDangNhapReducer, KhachHangDangKiReducer } from './reducers/Cus
 import { CreateFlightReducer } from './reducers/FlightReducer';
 import { GetAllHotelReducer, GetOneHotelReducer, GetRoomReducer } from './reducers/HotelReducer';
 import thunk from 'redux-thunk';
+import { CreatePromoReducer, GetInfoReducer } from './reducers/PromotionReducer';
 const initialState = {
     DangNhap: {
         ThongTinKhachHang: localStorage.getItem('ThongTinKhachHang')
@@ -16,7 +17,9 @@ const reducer = combineReducers({
     FlightCreate: CreateFlightReducer,
     GetAllHotel: GetAllHotelReducer,
     GetOneHotel: GetOneHotelReducer,
-    GetRoom: GetRoomReducer
+    GetRoom: GetRoomReducer,
+    Infocus: GetInfoReducer,
+    PromoCreate: CreatePromoReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, initialState, composeEnhancer(applyMiddleware(thunk)));

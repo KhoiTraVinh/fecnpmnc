@@ -20,7 +20,8 @@ import {
 } from "@mui/icons-material";
 
 import { useDispatch, useSelector } from 'react-redux';
-import { Axios } from "axios";
+import Axios from 'axios'
+import { CreatePromotion } from "../../actions/PromotionAction";
 
 export const ComboDetail = () => {
 
@@ -31,11 +32,13 @@ export const ComboDetail = () => {
   const { hotel } = onehotel;
   const getRoom = useSelector((state) => state.GetRoom);
   const { room } = getRoom;
+  const getinfo = useSelector((state) => state.Infocus);
+  const { info } = getinfo;
+  const getPromo = useSelector((state) => state.PromoCreate);
+  const { promo } = getPromo;
   const [sdkReady, setSdkReady] = useState(false);
-  console.log(flight);
-  console.log(hotel);
-  console.log(room);
   const dispatch = useDispatch();
+  
   useEffect(() => {
     const addPayPalScript = async () => {
       const { data } = await Axios.get('https://servercnpmnc.herokuapp.com/api/config/paypal');
@@ -48,8 +51,8 @@ export const ComboDetail = () => {
       };
       document.body.appendChild(script);
     };
-    if(hotel){
-      if (hotel) {
+    if(promo){
+      if (promo.isPay) {
         if (!window.paypal) {
           addPayPalScript();
         } else {
@@ -57,10 +60,23 @@ export const ComboDetail = () => {
         }
       }
     }
-  }, [dispatch, sdkReady])
+  }, [dispatch, sdkReady, promo])
 
-  const Success = () => {
-    console.log("Mua Combo thanh cong");
+  const Success = async () => {
+    dispatch(CreatePromotion({
+      price: hotel.Price,
+      pricediscount: hotel.PriceDiscount,
+      infocustomer: info,
+      flightId: flight.id,
+      hotelId: hotel._id,
+      isPay: true,
+    }));
+    const { data } = await Axios.put('https://servercnpmnc.herokuapp.com/api/hotel', {
+      idHotel: hotel?._id,
+      idRoom: room?._id
+    });
+    console.log(data);
+
   }
   return (
     <div className="comboDetail">
@@ -227,7 +243,7 @@ export const ComboDetail = () => {
               </div>
             </div>
           </div>
-          <PayPalButton amount={hotel.PriceDiscount} onSuccess={Success()}></PayPalButton>
+          <PayPalButton amount={hotel.PriceDiscount} onSuccess={Success}></PayPalButton>
         </div>
       </div>
 
