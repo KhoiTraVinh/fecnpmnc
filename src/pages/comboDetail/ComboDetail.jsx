@@ -53,7 +53,7 @@ export const ComboDetail = () => {
     };
     if(promo){
       if (promo.isPay) {
-        if (!window.paypal) {
+        if (window.paypal) {
           addPayPalScript();
         } else {
           setSdkReady(true);
@@ -75,7 +75,12 @@ export const ComboDetail = () => {
       idHotel: hotel?._id,
       idRoom: room?._id
     });
-    console.log(data);
+
+    const { data1 } = await Axios.post('https://servercnpmnc.herokuapp.com/api/promotion/sendmail', {
+      email: info.email,
+      name: info.Ho + ' ' + info.Ten
+    });
+
 
   }
   return (

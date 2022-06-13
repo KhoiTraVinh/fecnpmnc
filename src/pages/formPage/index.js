@@ -14,7 +14,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Box from "@mui/material/Box";
 import { getInforCus } from "../../actions/PromotionAction";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export const BookingInfo = () => {
   const [Ho, setHo] = useState('');
@@ -28,6 +28,13 @@ export const BookingInfo = () => {
   const [cmnd, setCmnd] = useState('');
   const [quoctinh, setQuoctinh] = useState('');
   const dispatch = useDispatch();
+  const FlightDetail = useSelector((state) => state.FlightCreate);
+  const { flight } = FlightDetail;
+  const onehotel = useSelector((state) => state.GetOneHotel);
+  const { hotel } = onehotel;
+  const getRoom = useSelector((state) => state.GetRoom);
+  const { room } = getRoom;
+  let date = new Date();
   const getInfo = (e) => {
     e?.preventDefault();
     console.log(Ho, Ten, Sdt, email, quoctinh);
@@ -233,23 +240,23 @@ export const BookingInfo = () => {
                 </div>
                 <hr />
                 <h2 className="bookingInfoBodyWidgetRightToph2">
-                  Chuyến bay đi • Mon, 13 Jun 2022
+                  Chuyến bay đi • Mon, {flight.Date}
                 </h2>
                 <div className="tenhangbay">
                   <h3 className="tenhang">Tên hãng bay</h3>
-                  <h3 className="tenhang1">:Vietnam Airlines</h3>
+                  <h3 className="tenhang1">:{flight.Airlines}</h3>
                 </div>
                 <div className="tenhangbay">
                   <h3 className="tenhang">Hạng Ghế</h3>
-                  <h3 className="tenhang1">:Phổ thông</h3>
+                  <h3 className="tenhang1">:{flight.seatclass}</h3>
                 </div>
 
                 <div className="thoigian">Thời gian di chuyển: </div>
 
                 <div className="tenhangbay">
-                  <div className="thoigianbatdau">22:50</div>
-                  <div className="thoigianketthuc">00:20</div>
-                  <div className="tongthoigian">1h 30m</div>
+                  <div className="thoigianbatdau">{flight.Start}</div>
+                  <div className="thoigianketthuc">{flight.End}</div>
+                  <div className="tongthoigian">{flight.Time}</div>
                 </div>
                 <h3 className="aservice1">
                   <ErrorOutline className="serviceIcon" /> Không hoàn tiền
@@ -271,23 +278,23 @@ export const BookingInfo = () => {
                 <h2 className="bookingInfoBodyWidgetRightToph2">Khách sạn</h2>
                 <div className="tenhangbay">
                   <h3 className="tenhang">Tên khách sạn</h3>
-                  <h3 className="tenhang1">:Cozrum Lux Hotel</h3>
+                  <h3 className="tenhang1">:{hotel.Name}</h3>
                 </div>
                 <div className="tenhangbay">
                   <h3 className="tenhang">Địa chỉ</h3>
-                  <h3 className="tenhang1">:Quận 1, Thành phố Hồ Chí Minh</h3>
+                  <h3 className="tenhang1">:{hotel.Address}</h3>
                 </div>
 
                 <div className="thoigian">Thông tin chi tiết: </div>
 
                 <div className="tenhangbay">
                   <h3 className="tenhang">Ngày nhận phòng</h3>
-                  <h3 className="tenhang1">:10/11/2022</h3>
+                  <h3 className="tenhang1">:{date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear()}</h3>
                 </div>
 
                 <div className="tenhangbay">
                   <h3 className="tenhang">Ngày trả phòng</h3>
-                  <h3 className="tenhang1">:10/11/2022</h3>
+                  <h3 className="tenhang1">:{date.getDate()+1 + '/' + date.getMonth() + '/' + date.getFullYear()}</h3>
                 </div>
 
                 <div className="tenhangbay">
