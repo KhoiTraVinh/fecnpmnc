@@ -7,11 +7,27 @@ import {
   MapsHomeWork,
   AttachMoney,
 } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import Axios from "axios";
+import { useEffect, useState } from "react";
 
 export default function Hotel() {
   const history = useHistory();
+
+  const [hotel, setHotel] = useState();
+
+  const params = useParams();
+  const getHotel = async () => {
+    await Axios.get(`https://servercnpmnc.herokuapp.com/api/hotel/${params.hotelId}`).then(res=>{
+      setHotel(res.data);
+    })
+    .catch(err=>console.log(err))
+  }
+  
+  useEffect(() => {
+    getHotel();
+  },[])
 
   function update(e) {
     alert("Cập nhật thành công");
@@ -50,27 +66,28 @@ export default function Hotel() {
             <span className="hotelShowTitle">Thông tin phòng</span>
             <div className="hotelShowInfo">
               <MapsHomeWork className="hotelShowIcon" />
-              <span className="hotelShowInfoTitle">Phòng VIP</span>
+              <span className="hotelShowInfoTitle">{hotel?.Name}</span>
             </div>
             <div className="hotelShowInfo">
               <AttachMoney className="hotelShowIcon" />
-              <span className="hotelShowInfoTitle">500$</span>
+              <span className="hotelShowInfoTitle">{hotel?.Price}</span>
             </div>
-            <span className="hotelShowTitle">Thông tin liên lạc</span>
+            <span className="hotelShowTitle">Thông tin</span>
             <div className="hotelShowInfo">
-              <Call className="hotelShowIcon" />
-              <span className="hotelShowInfoTitle">0989901328</span>
+              <AttachMoney className="hotelShowIcon" />
+              <span className="hotelShowInfoTitle">{
+              hotel?.Percent}</span>
             </div>
             <div className="hotelShowInfo">
-              <MailOutline className="hotelShowIcon" />
+              <AttachMoney className="hotelShowIcon" />
               <span className="hotelShowInfoTitle">
-                phamtrithuc22022000@gmail.com
+                {hotel?.PriceDiscount}
               </span>
             </div>
             <div className="hotelShowInfo">
               <LocationSearching className="hotelShowIcon" />
               <span className="hotelShowInfoTitle">
-                445 Gia Phú, P3, Q6, TPHCM
+                {hotel?.Address}
               </span>
             </div>
           </div>

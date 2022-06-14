@@ -19,7 +19,6 @@ export default function HotelList() {
   const getHotel = async () => {
     await Axios.get("https://servercnpmnc.herokuapp.com/api/hotel/get/all").then(res=>{
       setHotel(res.data);
-      console.log(res.data);
     })
     .catch(err=>console.log(err))
   }
@@ -47,8 +46,23 @@ export default function HotelList() {
     },
     {
       field: "Room",
-      headerName: "phòng",
-      width: 110,
+      headerName: "Loại phòng",
+      width: 170,
+      renderCell: (params) => {
+        return (
+          <>
+            <label for="cars">Loại phòng:</label>
+            <select id="cars">
+              {params.value.map((room) => {
+                console.log(room);
+                <option key={room._id} value={room.Name}>
+                  {room.Name}
+                </option>
+              })}
+            </select>
+          </>
+        );
+      },
     },
     {
       field: "Price",
@@ -72,7 +86,7 @@ export default function HotelList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/hotel/" + params.row.ID}>
+            <Link to={"/hotel/" + params.row._id}>
               <button className="hotelListEdit">Edit</button>
             </Link>
 

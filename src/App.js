@@ -19,11 +19,6 @@ function App() {
     <Router>
       <Topbar />
       <Switch>
-        {/* Login Page */}
-        <Route path="/login">
-          <Login />
-        </Route>
-        {
           <>
             <div className="container">
               <Sidebar />
@@ -63,7 +58,6 @@ function App() {
               </Route>
             </div>
           </>
-        }
       </Switch>
     </Router>
   );

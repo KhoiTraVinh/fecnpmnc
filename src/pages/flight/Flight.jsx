@@ -24,9 +24,6 @@ export default function Flight() {
         </Link>
       </div>
       <div className="flightTop">
-        <div className="flightTopLeft">
-          <Chart data={flightData} dataKey="Sales" title="Số lượng vé đã bán" />
-        </div>
         <div className="flightTopRight">
           <div className="flightInfoTop">
             <img
