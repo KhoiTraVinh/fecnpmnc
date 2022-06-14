@@ -211,3 +211,136 @@ export const flightRows = [
     img: "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
   },
 ];
+
+export const transactionRows = [
+  {
+    ID: "1",
+    hotel: "Thuc Pham",
+    hotelimg:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    hoteladdress: "123 đường 321 - Hà Lội",
+    hotelphone: "0123321312",
+    hotelroomtype: "VIP",
+    hotelprice: 500,
+    flight: "VietNam Airline",
+    flightimg:
+      "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
+    flightseat: "Thương gia",
+    flightprice: 5000,
+    flightstartpoint: "Hà Lội",
+    flightendpoint: "HCM",
+    userimg:
+      "https://i.pinimg.com/474x/ea/f2/9d/eaf29d7da7ee6459bc76950547630114--johnny-depp-news-jack-oconnell.jpg",
+    userphone: "012839172",
+    totalprice: 5500,
+    status: {
+      accept: "accept",
+      decline: "decline",
+      pending: "pending",
+    },
+  },
+  {
+    ID: "2",
+    hotel: "Thuc Pham",
+    hotelimg:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    hoteladdress: "123 đường 321 - Hà Lội",
+    hotelphone: "0123321312",
+    hotelroomtype: "VIP",
+    hotelprice: 500,
+    flight: "VietNam Airline",
+    flightimg:
+      "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
+    flightseat: "Thương gia",
+    flightprice: 5000,
+    flightstartpoint: "Hà Lội",
+    flightendpoint: "HCM",
+    userphone: "012839172",
+    userimg:
+      "https://i.pinimg.com/474x/ea/f2/9d/eaf29d7da7ee6459bc76950547630114--johnny-depp-news-jack-oconnell.jpg",
+    totalprice: 5500,
+    status: {
+      accept: "accept",
+      decline: "decline",
+      pending: "pending",
+    },
+  },
+  {
+    ID: "3",
+    hotel: "Thuc Pham",
+    hotelimg:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    hoteladdress: "123 đường 321 - Hà Lội",
+    hotelphone: "0123321312",
+    hotelroomtype: "VIP",
+    hotelprice: 500,
+    flight: "VietNam Airline",
+    flightimg:
+      "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
+    flightseat: "Thương gia",
+    flightprice: 5000,
+    flightstartpoint: "Hà Lội",
+    flightendpoint: "HCM",
+    userimg:
+      "https://i.pinimg.com/474x/ea/f2/9d/eaf29d7da7ee6459bc76950547630114--johnny-depp-news-jack-oconnell.jpg",
+    userphone: "012839172",
+    totalprice: 5500,
+    status: {
+      accept: "accept",
+      decline: "decline",
+      pending: "pending",
+    },
+  },
+  {
+    ID: "4",
+    hotel: "Thuc Pham",
+    hotelimg:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    hoteladdress: "123 đường 321 - Hà Lội",
+    hotelphone: "0123321312",
+    hotelroomtype: "VIP",
+    hotelprice: 500,
+    flight: "VietNam Airline",
+    flightimg:
+      "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
+    flightseat: "Thương gia",
+    flightprice: 5000,
+    flightstartpoint: "Hà Lội",
+    flightendpoint: "HCM",
+    userphone: "012839172",
+    userimg:
+      "https://i.pinimg.com/474x/ea/f2/9d/eaf29d7da7ee6459bc76950547630114--johnny-depp-news-jack-oconnell.jpg",
+    totalprice: 5500,
+    status: {
+      accept: "accept",
+      decline: "decline",
+      pending: "pending",
+    },
+  },
+  {
+    ID: "5",
+    hotel: "Thuc Pham",
+    hotelimg:
+      "https://www.hoteljob.vn/uploads/images/17-09-07-15/Tieuchuanthietkekhachs%E1%BA%A1n5sao1.jpg",
+    hoteladdress: "123 đường 321 - Hà Lội",
+    hotelphone: "0123321312",
+    hotelroomtype: "VIP",
+    hotelprice: 500,
+    flight: "VietNam Airline",
+    flightimg:
+      "https://e7.pngegg.com/pngimages/232/927/png-clipart-hanoi-flight-vietnam-airlines-incheon-international-airport-others-leaf-symmetry.png",
+    flightseat: "Thương gia",
+    flightprice: 5000,
+    flightstartpoint: "Hà Lội",
+    flightendpoint: "HCM",
+    userimg:
+      "https://i.pinimg.com/474x/ea/f2/9d/eaf29d7da7ee6459bc76950547630114--johnny-depp-news-jack-oconnell.jpg",
+    userphone: "012839172",
+    totalprice: 5500,
+    status: {
+      accept: "accept",
+      decline: "decline",
+      pending: "pending",
+    },
+  },
+];

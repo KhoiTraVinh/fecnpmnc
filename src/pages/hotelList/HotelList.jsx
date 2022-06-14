@@ -2,8 +2,9 @@ import "./hotelList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { Add, DeleteOutline } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { hotelRows } from "../../dummyData";
+import Axios  from "axios";
 
 export default function HotelList() {
   const [data, setData] = useState(hotelRows);
@@ -12,39 +13,56 @@ export default function HotelList() {
     setData(data.filter((item) => item.ID != id));
   };
 
+  const [hotel, setHotel] = useState();
+
+
+  const getHotel = async () => {
+    await Axios.get("https://servercnpmnc.herokuapp.com/api/hotel/get/all").then(res=>{
+      setHotel(res.data);
+      console.log(res.data);
+    })
+    .catch(err=>console.log(err))
+  }
+  
+  useEffect(() => {
+    getHotel();
+  },[])
+
   const columns = [
-    { field: "ID", headerName: "ID", width: 180 },
+    { field: "_id", headerName: "ID", width: 180 },
     {
-      field: "hotelname",
+      field: "Name",
       headerName: "Khách sạn",
       width: 200,
-      renderCell: (params) => {
-        return (
-          <div className="hotelListItem">
-            <img src={params.row.avatar} alt="" className="hotelListImg" />
-            {params.row.title}
-          </div>
-        );
-      },
     },
     {
-      field: "address",
+      field: "Address",
       headerName: "Địa chỉ",
       width: 190,
     },
     {
-      field: "phone",
-      headerName: "Số điện thoại",
+      field: "Flight",
+      headerName: "Đã gồm vé máy bay",
       width: 110,
     },
     {
-      field: "roomtype",
-      headerName: "Loại phòng",
+      field: "Room",
+      headerName: "phòng",
       width: 110,
     },
     {
-      field: "price",
+      field: "Price",
       headerName: "Giá",
+      width: 90,
+    },
+    {
+      field: "PriceDiscount",
+      headerName: "Giá Khuyến Mãi",
+      width: 90,
+    },
+    {
+      field: "Percent",
+      headerName: "Phần trăm giảm giá",
       width: 90,
     },
     {
@@ -82,10 +100,10 @@ export default function HotelList() {
         </div>
       </div>
       <DataGrid
-        rows={data}
+        rows={hotel}
         disableSelectionOnClick
         columns={columns}
-        getRowId={(row) => row.ID}
+        getRowId={(row) => row._id}
         pageSize={100}
         rowsPerPageOptions={[10]}
         checkboxSelection
